@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Dessert | Premium Dessert Shop in Hyderabad</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Little Dessert - Premium dessert shop in Hyderabad serving cakes, waffles, brownies, milkshakes, chocolates & handcrafted desserts." />
+  <meta name="keywords" content="Little Dessert, Dessert Shop Hyderabad, Cakes, Waffles, Brownies, Ice Creams" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    h1,h2,h3,h4,h5 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(220,38,38,0.12);
+    }
+
+    .hero-bg {
+      background:
+      linear-gradient(to right, rgba(127,29,29,0.88), rgba(220,38,38,0.55)),
+      url('https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gold-text {
+      color: #dc2626;
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg,#ef4444,#b91c1c);
+      color: white;
+    }
+
+    .menu-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .floating {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .gallery img {
+      transition: 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.04);
+    }
+
+    .shadow-gold {
+      box-shadow: 0 10px 30px rgba(220,38,38,0.18);
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-red-700/90 text-white backdrop-blur-lg border-b border-red-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold">Little Dessert</h1>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#home" class="hover:text-red-200 transition">Home</a>
+      <a href="#about" class="hover:text-red-200 transition">About</a>
+      <a href="#menu" class="hover:text-red-200 transition">Menu</a>
+      <a href="#gallery" class="hover:text-red-200 transition">Gallery</a>
+      <a href="#reviews" class="hover:text-red-200 transition">Reviews</a>
+      <a href="#contact" class="hover:text-red-200 transition">Contact</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu flex-col bg-red-700 text-white px-6 py-5 gap-4 md:hidden">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+
+  <div class="absolute top-24 left-10 floating opacity-20 text-8xl">🍩</div>
+  <div class="absolute bottom-24 right-10 floating opacity-20 text-8xl">🍰</div>
+
+  <div class="max-w-7xl mx-auto px-6 pt-28 w-full">
+
+    <div class="max-w-3xl" data-aos="fade-up">
+      <p class="uppercase tracking-[6px] text-red-100 mb-4">Premium Dessert Experience</p>
+
+      <h1 class="text-5xl md:text-7xl leading-tight font-bold mb-6 text-white">
+        Sweet Moments Begin at <span class="text-red-200">Little Dessert</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-red-100 leading-relaxed mb-8">
+        Delicious desserts, cakes, waffles & treats made to satisfy every craving.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#menu" class="gold-btn px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-gold">
+          View Menu
+        </a>
+
+        <a href="https://maps.app.goo.gl/WuXNUH9vaiDfUYR58" target="_blank" class="border border-white px-8 py-4 rounded-full text-white hover:bg-white hover:text-red-700 transition-all duration-300">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-24 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <div data-aos="fade-right">
+      <p class="gold-text uppercase tracking-[5px] mb-4">About Us</p>
+
+      <h2 class="text-5xl font-bold mb-6">
+        Crafted with Love & Sweet Perfection
+      </h2>
+
+      <p class="text-gray-700 leading-loose mb-6">
+        At Little Dessert, every dessert is handcrafted with premium ingredients, rich flavors, and artistic presentation.
+      </p>
+
+      <p class="text-gray-600 leading-loose">
+        Located in the heart of Hyderabad, our cozy dessert café is designed for families, friends, and dessert lovers.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+      <img class="rounded-3xl h-72 w-full object-cover" src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1200&auto=format&fit=crop" />
+      <img class="rounded-3xl h-96 mt-10 w-full object-cover" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop" />
+      <img class="rounded-3xl h-96 -mt-10 w-full object-cover" src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?q=80&w=1200&auto=format&fit=crop" />
+      <img class="rounded-3xl h-72 w-full object-cover" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" />
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="py-24 px-6 bg-red-50">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="gold-text uppercase tracking-[5px] mb-4">Featured Menu</p>
+      <h2 class="text-5xl font-bold">Our Delicious Creations</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="menu-card glass rounded-3xl overflow-hidden shadow-gold">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop" class="h-72 w-full object-cover duration-500" />
+        </div>
+
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="text-3xl">Chocolate Truffle Cake</h3>
+            <span class="gold-text font-bold">₹450</span>
+          </div>
+
+          <p class="text-gray-600">Rich chocolate layered cake topped with creamy ganache.</p>
+        </div>
+      </div>
+
+      <div class="menu-card glass rounded-3xl overflow-hidden shadow-gold">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" class="h-72 w-full object-cover duration-500" />
+        </div>
+
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="text-3xl">Belgian Waffles</h3>
+            <span class="gold-text font-bold">₹220</span>
+          </div>
+
+          <p class="text-gray-600">Crispy golden waffles with premium chocolate drizzle.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-24 px-6 bg-red-50">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <div>
+      <p class="gold-text uppercase tracking-[5px] mb-4">Visit Us</p>
+
+      <h2 class="text-5xl font-bold mb-8">
+        Experience Sweet Luxury
+      </h2>
+
+      <div class="space-y-6 text-gray-700">
+
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-location-dot text-red-600 mt-1"></i>
+          <p>8FX9+V8R, Qazipura, Shah Ali Banda, Hyderabad, Telangana 500065</p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-phone text-red-600"></i>
+
+          <a href="tel:+918801449380" class="hover:text-red-600 transition">
+            +91 8801449380
+          </a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-clock text-red-600"></i>
+          <p>Open Daily • 11:00 AM - 12:00 AM</p>
+        </div>
+
+      </div>
+
+      <div class="flex flex-wrap gap-4 mt-10">
+
+        <a href="tel:+918801449380" class="gold-btn px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300">
+          Call Now
+        </a>
+
+        <a href="https://wa.me/918801449380" target="_blank" class="border border-red-500 text-red-600 px-8 py-4 rounded-full hover:bg-red-600 hover:text-white transition-all duration-300">
+          WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+    <div class="rounded-3xl overflow-hidden shadow-gold">
+      <iframe
+        src="https://maps.google.com/maps?q=Little%20Dessert%20Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="500"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-red-200 py-10 px-6 bg-red-700 text-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+
+    <div>
+      <h3 class="text-4xl mb-4">Little Dessert</h3>
+
+      <p class="text-red-100">
+        Premium dessert shop in Hyderabad serving unforgettable sweet experiences.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-2xl mb-4">Quick Links</h4>
+
+      <div class="flex flex-col gap-3 text-red-100">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="text-2xl mb-4">Follow Us</h4>
+
+      <div class="flex gap-5 text-2xl">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center text-red-100 mt-12 border-t border-red-400 pt-6">
+    © 2026 Little Dessert. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918801449380" target="_blank" class="whatsapp">
+  <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+</a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
